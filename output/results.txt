@@ -1,0 +1,10 @@
+{"result": true, "message": "Item added successfully."}
+{"result": true, "message": "Item added successfully."}
+{"result": true, "message": "Items removed successfully. IDs: 32"}
+{"result": true, "message": "Items removed successfully. IDs: 666"}
+{"result": true, "message": {"itemDtoList":[{"itemId":35,"categoryId":1001,"sellerId":34,"price":400.0,"quantity":3,"itemType":"DEFAULT","subItemIdSet":["622"]},{"itemId":31,"categoryId":1001,"sellerId":34,"price":400.0,"quantity":3,"itemType":"DEFAULT","subItemIdSet":null},{"itemId":622,"categoryId":3242,"sellerId":5003,"price":600.0,"quantity":2,"itemType":"VAS","parentId":35}],"totalPrice":3600.0,"appliedPromotionId":9909,"discountApplied":360.0}}
+ty.item -> {"itemId":35,"categoryId":1001,"sellerId":34,"price":400.0,"quantity":3,"itemType":"DEFAULT","subItemIdSet":["622"]}
+ty.vasItem -> {"itemId":622,"categoryId":3242,"sellerId":5003,"price":600.0,"quantity":2,"itemType":"VAS","parentId":35}
+ty.item -> {"itemId":31,"categoryId":1001,"sellerId":34,"price":400.0,"quantity":3,"itemType":"DEFAULT","subItemIdSet":null}
+{"result": true, "message": "Items removed successfully"}
+{"result": true, "message": {"itemDtoList":null,"totalPrice":0.0,"appliedPromotionId":-1,"discountApplied":0.0}}

@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  trendyol-mongo:
+    hostname: trendyol-mongo
+    image: mongo:5.0.0
+    ports:
+      - 27017:27017
+    restart: always
+    entrypoint: [ "mongod","--bind_ip_all","--replSet","rs0" ]
+  mongo-setup:
+    image: mongo:5.0.0
+    depends_on:
+      - trendyol-mongo
+    volumes:
+      - ./scripts/mongo-init.js:/scripts/mongo-init.js
+    links:
+      - trendyol-mongo:trendyol-mongo
+    restart: "no"
+    entrypoint: [ "bash", "-c", "sleep 10 && mongo --host trendyol-mongo:27017 /scripts/mongo-init.js" ]

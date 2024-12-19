@@ -1,0 +1,37 @@
+spring:
+  profiles:
+    active: ${ACTIVE_PROFILE:local}
+  application:
+    name: tycase
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+  logging:
+    level:
+      root: INFO
+      com.doruksorg.tycase: ${LOG_LEVEL:DEBUG}
+      org.springframework.web: ${LOG_LEVEL:DEBUG}
+      org.springframework.data.mongodb.core.MongoTemplate: ${LOG_LEVEL:DEBUG}
+
+app:
+  runPostConstruct: true
+
+promotion:
+  same-seller:
+    discount-rate: ${SAME_SELLER_DISCOUNT_RATE:0.1}
+  category:
+    discount-rate: ${CATEGORY_DISCOUNT_RATE:0.05}
+  total-price:
+    discounts:
+      DISCOUNT1:
+        threshold: ${DISCOUNT1_THRESHOLD:500}
+        amount: ${DISCOUNT1_AMOUNT:250}
+      DISCOUNT2:
+        threshold: ${DISCOUNT2_THRESHOLD:5000}
+        amount: ${DISCOUNT2_AMOUNT:500}
+      DISCOUNT3:
+        threshold: ${DISCOUNT3_THRESHOLD:10000}
+        amount: ${DISCOUNT3_AMOUNT:1000}
+      DISCOUNT4:
+        threshold: ${DISCOUNT4_THRESHOLD:50000}
+        amount: ${DISCOUNT4_AMOUNT:2000}
